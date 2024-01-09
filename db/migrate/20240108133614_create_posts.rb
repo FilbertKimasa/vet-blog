@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration[7.1]
       t.string :title, limit: 255
       t.text :text
       t.integer :likes_counter
+      t.integer :comments_counter
       t.timestamps
     end
 
