@@ -33,7 +33,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_133653) do
     t.integer "author_id"
     t.string "title", limit: 255
     t.text "text"
-    t.integer "likes_counter"
+    t.integer "likes_counter", default: 0
+    t.integer "comments_counter", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
