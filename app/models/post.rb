@@ -18,4 +18,9 @@ class Post < ApplicationRecord
   def update_likes_counter
     update(likes_counter: likes.count)
   end
+
+  def truncated_post_text(limit = 2)
+    # Adjust the limit to your desired length
+    post.text.length > limit ? "#{post[0..limit - 1]}..." : post
+  end
 end

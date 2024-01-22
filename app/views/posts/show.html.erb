@@ -1,12 +1,12 @@
 <!-- app/views/posts/show.html.erb -->
 <h1><%= @post.title %></h1>
 
-<p><%= @post.body %></p>
+<p><%= @post.text %></p>
 
 <h2>Comments</h2>
 
 <ul>
   <% @comments.each do |comment| %>
-    <li><%= comment.body %></li>
+    <li><%= comment.text %></li>
   <% end %>
 </ul>
