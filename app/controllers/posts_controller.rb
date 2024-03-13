@@ -11,4 +11,10 @@ class PostsController < ApplicationController
     @post = @user.posts.find(params[:id])
     @comments = @post.comments
   end
+
+  def like
+    @post = Post.find(params[:id])
+    current_user.likes << @post unless current_user.likes.include?(@post)
+    redirect_to @post
+  end
 end
