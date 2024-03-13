@@ -1,0 +1,6 @@
+<!-- app/views/posts/_like_button.html.erb -->
+<% if current_user.likes.include?(post) %>
+  <%= link_to "Unlike", like_post_path(post), method: :post, data: { confirm: "Are you sure?" } %>
+<% else %>
+  <%= link_to "Like", like_post_path(post), method: :post %>
+<% end %>
